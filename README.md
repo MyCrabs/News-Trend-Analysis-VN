@@ -17,6 +17,6 @@ Phân tích xu hướng từ các bài báo Việt Nam (VnExpress, Tuổi Trẻ.
 
 ## Cấu trúc thư mục
 - `crawler/`: mã cào dữ liệu
-- `data/`: file SQLite hoặc JSON
+- `data/`: file SQLite
 - `analysis/`: xử lý dữ liệu, trực quan hóa
 - `dashboard/`: giao diện Streamlit

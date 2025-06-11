@@ -2,6 +2,8 @@
 from bs4 import BeautifulSoup
 import json
 import time
+from save_to_sqlite import save_article_to_db
+from cleaning_data import clean_article
 """Requests: gửi yêu cầu http để lấy html
    Beautiful Soup: Phân tích cấu trúc HTML và lấy data"""
 
@@ -65,12 +67,15 @@ def crawl_vnexpress():
       except Exception as e:
          print(f":Lỗi khi xử lí link {link}: {e}")
       time.sleep(1)
-   file_name = f"data/vnexpress_{categories[option]}.json"
-   with open(file_name, "w", encoding='utf-8') as f:
-      json.dump(articles, f, ensure_ascii=False, indent=2)
-   print(f"Hoàn tất. Dữ liệu đã lưu ở data/{file_name}")
+   # file_name = f"data/vnexpress_{categories[option]}.json"
+   # with open(file_name, "w", encoding='utf-8') as f:
+   #    json.dump(articles, f, ensure_ascii=False, indent=2)
+   # print(f"Hoàn tất. Dữ liệu đã lưu ở data/{file_name}")
+   return articles
 
 if __name__ == "__main__":
-   crawl_vnexpress()
+   articles = clean_article(crawl_vnexpress())
+   save_article_to_db(articles=articles, db_path=r"C:\Users\ADMIN\Desktop\Crawling-News-Project\News-Trend-Analysis-VN\data\vnexpress.db")
+
 
    
