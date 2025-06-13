@@ -11,7 +11,8 @@ def save_article_to_db(articles, db_path):
         title TEXT,
         time DATETIME,
         content TEXT,
-        link TEXT UNIQUE
+        link TEXT UNIQUE,
+        category TEXT
         )               
     """)
     
@@ -19,9 +20,9 @@ def save_article_to_db(articles, db_path):
     for article in articles:
         try:    
             cursor.execute("""
-                INSERT OR IGNORE INTO article (title, content, time, link)
-                VALUES (?, ?, ?, ?)
-            """, (article["title"], article["content"], article["time"], article["url"]))
+                INSERT OR IGNORE INTO article (title, content, time, link, category)
+                VALUES (?, ?, ?, ?, ?)
+            """, (article["title"], article["content"], article["time"], article["url"], article["category"]))
         except Exception as e:
             print(f"Lỗi khi lưu dữ liệu vào Database: {e}")
             continue

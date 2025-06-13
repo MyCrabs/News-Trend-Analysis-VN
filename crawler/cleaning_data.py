@@ -19,6 +19,7 @@ def clean_article(articles):
         cleaned = {}
         cleaned["title"] = article.get("title", "").strip()
         cleaned['url'] = article.get('url', '').strip()
+        cleaned["category"] = article.get("category").strip()
         cleaned["time"] = parse_time(article.get("time", "").strip())
         # Làm sạch nội dung (content)
         content = article.get("content", "")

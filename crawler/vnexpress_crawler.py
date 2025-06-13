@@ -36,13 +36,18 @@ def get_article_content(url):
       time_published = article_soup.find("span", class_ = "date").text.strip()
       para_content = article_soup.select("article.fck_detail p")
       content = "\n".join(p.text.strip() for p in para_content if p.text.strip())
+      category_tag = article_soup.select_one("ul.breadcrumb li a") # select_one: Chỉ lấy thẻ đầu tiên
+      category = category_tag.text.strip() if category_tag else "unknown"
+      if not category:
+         return None
    except AttributeError:
          return None
    return {
       "url": url,
       "title": title,
       "time": time_published,
-      "content": content
+      "content": content,
+      "category": category
    }
 
 def crawl_vnexpress():
