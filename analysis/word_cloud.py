@@ -17,7 +17,7 @@ stopwords = set([
     "đã", "đang", "sẽ", "đến", "với", "từ", "do", "trong", "ngoài", "trên", "dưới", "theo", "qua", "để", "cũng", "đó", 
     "nữa", "còn", "hay", "hoặc", "mà", "nhé", "thôi", "luôn", "chỉ", "hơn", "kém", "đều",
     "một", "hai", "ba", "nhiều", "ít", "rất", "hơi", "vài", "mỗi", "các", "mọi", "tất", "cả",
-    "và", "hoặc", "nhưng", "bởi", "do", "tuy", "dù", "mặc", "dù", "song", "để", "cũng",
+    "và", "hoặc", "nhưng", "bởi", "do", "tuy", "dù", "mặc", "dù", "xong", "để", "cũng",
     "gì", "ai", "đâu", "sao", "nào", "khi nào", "tại sao",
     "vâng", "dạ", "ừ", "ờ", "ồ", "à", "á", "ồ", "vậy", "thế", "thật", "ừm", "ơ", "ha", "hả", "à", "nhỉ", "chắc",
     "cái", "việc", "này", "kì", "sự", "lúc", "nơi", "người", "điều", "chuyện", "trường", "thời", "gian", "năm", "tháng"
