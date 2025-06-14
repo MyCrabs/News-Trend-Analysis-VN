@@ -1,22 +1,24 @@
-# News Trend Analysis - Vietnam
+# VnExpress News Analysis
 
-Phân tích xu hướng từ các bài báo Việt Nam (VnExpress, Tuổi Trẻ...) sử dụng Python.
+Phân tích nội dung báo chí từ VnExpress bằng Python, SQlite và Machine Learning.
 
-## Mục tiêu
+## Mục tiêu dự án
+Dự án nhằm thu thập, làm sạch và phân tích dữ liệu từ trang báo điện tử VnExpress để:
 - Cào dữ liệu từ báo điện tử
 - Lưu trữ dữ liệu vào SQLite
-- Phân tích xu hướng từ khóa
-- Hiển thị kết quả với Streamlit Dashboard
+- Hiểu xu hướng các bài viết theo chuyên mục
+- Phân tích xu hướng từ khóa và trực quan từ khoá nổi bật bằng Wordcloud
+- Ứng dụng mô hình học máy (Logistic Regression) để dự đoán chuyên mục từ 1 đoạn văn bản mới
 
 ## Công nghệ sử dụng
 - Python
-- requests, BeautifulSoup, newspaper3k
+- requests, BeautifulSoup
 - SQLite
-- pandas, matplotlib, seaborn
-- Streamlit
+- pandas, matplotlib, , sklearn, underthesea, wordcloud
+- Gradio
 
 ## Cấu trúc thư mục
-- `crawler/`: mã cào dữ liệu
+- `crawler/`: cào dữ liệu
 - `data/`: file SQLite
-- `analysis/`: xử lý dữ liệu, trực quan hóa
-- `dashboard/`: giao diện Streamlit
+- `analysis/`: xử lý dữ liệu, trực quan hóa, dự đoán văn bản
+
